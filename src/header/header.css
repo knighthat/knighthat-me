@@ -1,0 +1,30 @@
+.knight-hat-gaming-header {
+    width: 100vw;
+    height: 5em;
+    
+    position: fixed;
+    z-index: 100;
+    display: flex;
+
+    align-items: center;
+    justify-content: right;
+    right: 2em;
+}
+
+li {
+    display         : inline-block;
+    padding         : 8px 12px;
+    margin          : 6px 6px;
+    background-color: #222;
+    border-radius   : 16px;
+}
+
+li:hover {
+    transform: scale(1.2);
+    transition: .6s;
+}
+
+li > a {
+    text-decoration: none;
+    color: white;
+}
