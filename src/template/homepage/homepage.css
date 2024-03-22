@@ -1,0 +1,160 @@
+/*
+    Main background
+*/
+
+@media screen and (min-width: 1280px) {
+    #header-background {
+        min-width: 100%;
+        height: 720px;
+        max-height: 35rem;
+
+        /* Always stays at the bottom */
+        z-index: -1;
+
+        /* Center and scale the image nicely */
+        background: url("/header-background.webp") no-repeat center;
+        background-size: cover;
+
+        /* Blur effect */
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #header-background {
+        min-height: 5vh;
+    }
+}
+
+/*
+    Logo
+*/
+
+.logo-section {
+    position: absolute;
+    top: 5rem;
+
+    width: 100%;
+    min-height: 10rem;
+}
+
+.logo-container {
+    height: inherit;
+    width: 80%;
+}
+
+@media screen and (max-width: 1280px) {
+    .logo-container {
+        width: 95%;
+    }
+}
+
+@font-face {
+    font-family: "Noir";
+    src: url("/fonts/NoirPro-Heavy.ttf");
+}
+
+@media screen and (min-width: 1280px) {
+    .pure-menu-heading#logo {
+        max-width: 100%;
+
+        color: white;
+        text-align: center;
+
+        padding: 0;
+
+        font-family: "Noir", system-ui, sans-serif;
+        /*font-size: 10rem;*/
+        font-size: 10rem;
+        max-font-size: 20vw;
+        font-weight: bold;
+
+        letter-spacing: 1rem;
+    }
+
+    #logo {
+        text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    }
+}
+
+/*
+    Features
+*/
+
+div.features-section {
+    min-height: 10rem;
+}
+
+.cards-layout {
+    width: 100%;
+    height: inherit;
+
+    padding: 0 10%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .cards-layout {
+        flex-direction: column;
+        align-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .cards-layout {
+        margin-bottom: 5rem;
+    }
+}
+
+.feature-card {
+    flex: 1;
+    text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+    .feature-card {
+        transform: translate(0, -35%);
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .feature-card {
+        transform: translate(0, 15%);
+    }
+}
+
+.feature-card-background {
+    max-width: 250px;
+    min-height: 300px;
+
+    margin: 0 auto;
+
+    /*background: linear-gradient(to bottom right, #00A3AF, #FF8350);*/
+    background: #575757;
+    border-radius: 10px 30px 10px 30px;
+}
+
+.feature-card-background:hover {
+    cursor: pointer;
+}
+
+.feature-card-icon {
+    max-width: 80%;
+}
+
+.feature-card-description > .feature-card-description-title {
+    text-align: left;
+    margin: 0 0 0 10%;
+}
+
+.feature-card-description > p.feature-card-description-description {
+    margin: 0 10%;
+
+    text-align: left;
+}
