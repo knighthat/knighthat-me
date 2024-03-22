@@ -1,9 +1,5 @@
 import './footer.css'
 
-import btc from '/icons/btc-32x32.png'
-import eth from '/icons/eth-32x32.png'
-import xmr from '/icons/xmr-32x32.png'
-
 import {FetchLatestCommit} from "/src/assets/js/github-api.jsx";
 import {REPOSITORY, CONTACT_EMAIL} from "../assets/js/global.jsx";
 
@@ -44,8 +40,11 @@ function Wallets() {
       <div className={"pure-g"}>
         {/* Bitcoin Wallet */}
         <div className={"pure-u-1"}>
-          <img className={"pure-u-1-5 footer-section-method-icon"} src={btc} alt={"Bitcoin logo"}/>
-
+          <img
+              className={"pure-u-1-5 footer-section-method-icon"}
+              src='/icons/btc-32x32.png'
+              alt={"Bitcoin logo"}
+          />
           <div className={"pure-u-4-5"}>
             <div className={"pure-u-1 footer-section-method-text"}>
               <span>1GpZUvhdVkCFxqF4vuaiFxtBTxB3L94vnK</span>
@@ -55,7 +54,11 @@ function Wallets() {
 
         {/* Monero Wallet */}
         <div className={"pure-u-1"}>
-          <img className={"pure-u-1-5 footer-section-method-icon"} src={xmr} alt={"Bitcoin logo"}/>
+          <img
+              className={"pure-u-1-5 footer-section-method-icon"}
+              src='/icons/xmr-32x32.png'
+              alt={"Bitcoin logo"}
+          />
           <div className={"pure-u-4-5"}>
             <div className={"pure-u-1 footer-section-method-text"}>
               <span>44G5dUFTbFWYfZAk69irnDUCTNZzP5viNTmkGpCNCLHjjYQq7jjRTWoYTH1aY8P841hExP31Qxg2hXPtxreKu11zCYdxQUj</span>
@@ -65,7 +68,11 @@ function Wallets() {
 
         {/* Ethereum Wallet */}
         <div className={"pure-u-1"}>
-          <img className={"pure-u-1-5 footer-section-method-icon"} src={eth} alt={"Bitcoin logo"}/>
+          <img
+              className={"pure-u-1-5 footer-section-method-icon"}
+              src='/icons/eth-32x32.png'
+              alt={"Bitcoin logo"}
+          />
           <div className={"pure-u-4-5"}>
             <div className={"pure-u-1 footer-section-method-text"}>
               <span>0x15b9F199b4Db223Ac35bfd5c43B7036E29d06141</span>
