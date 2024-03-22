@@ -6,7 +6,7 @@ import {Footer} from "./template/footer.jsx";
 import {HomePage} from "./template/homepage/homepage.jsx";
 
 
-ReactDOM.createRoot(document.body).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <HomePage/>
       <Footer/>
