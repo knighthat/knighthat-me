@@ -1,7 +1,7 @@
 import './footer.css'
 
 import {FetchLatestCommit} from "/src/assets/js/github-api.jsx";
-import {REPOSITORY, CONTACT_EMAIL} from "../assets/js/global.jsx";
+import {CONTACT_EMAIL, REPOSITORY} from "/src/assets/js/global.jsx";
 
 function Contacts() {
   return (
