@@ -1,0 +1,86 @@
+/*
+    Footer
+*/
+
+footer {
+    margin-top: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    max-height: 30vh;
+}
+
+.footer-margin {
+    margin: 0 10%;
+    height: max-content;
+}
+
+.copyright-notice-and-version-section {
+    width: 100%;
+    height: 2rem;
+
+    padding-top: 2rem;
+
+    border-top: rgba(150, 150, 150, .8) 3px solid;
+}
+
+.footer-section > h2 {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.footer-section > div.pure-g {
+    margin: 2rem 0 3rem 1rem;
+    gap: 2rem;
+}
+
+.footer-section-method-icon {
+    max-width: 32px;
+    max-height: 32px;
+
+    margin-right: 10px;
+}
+
+.footer-section-method-text {
+    height: 32px;
+
+    display: flex;
+    justify-items: left;
+    align-items: center;
+}
+
+.footer-section-method-text > span {
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*
+    Copyright notice & VCS
+*/
+
+.copyright-notice > p, .version > p {
+    margin: 0;
+
+    display: flex;
+
+    color: #666;
+}
+
+/* Copyright notice */
+
+.copyright-notice > p {
+    margin-left: 3rem;
+    justify-content: flex-start;
+}
+
+/* VCS */
+
+.version > p {
+    margin-right: 3rem;
+    justify-content: flex-end;
+}
+
+.version > p > ion-icon {
+    margin: auto 0;
+}
