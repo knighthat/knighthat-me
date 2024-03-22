@@ -1,3 +1,9 @@
+/* Separator-position-thickness(px)-style */
+.sep-top-3-s {
+    padding-top: 1rem;
+    border-top: rgba(150, 150, 150, .8) 3px solid;
+}
+
 /*
     Footer
 */
@@ -14,20 +20,12 @@ footer {
     height: max-content;
 }
 
-.copyright-notice-and-version-section {
-    width: 100%;
-    height: 2rem;
-
-    padding-top: 2rem;
-
-    border-top: rgba(150, 150, 150, .8) 3px solid;
-}
-
 .footer-section > h2 {
     text-align: left;
     padding-left: 2rem;
 }
 
+/* Space between elements in section. For MOBILE devices */
 .footer-section > div.pure-g {
     margin: 2rem 0 3rem 1rem;
     gap: 2rem;
@@ -58,29 +56,23 @@ footer {
 /*
     Copyright notice & VCS
 */
+.copyright-notice-and-version-section {
+    width: 100%;
+    height: 2rem;
+}
 
 .copyright-notice > p, .version > p {
-    margin: 0;
-
-    display: flex;
-
     color: #666;
 }
 
-/* Copyright notice */
+@media screen and (min-width: 80em) {
+    .copyright-notice > p {
+        margin-left: 3rem;
+        justify-content: flex-start;
+    }
 
-.copyright-notice > p {
-    margin-left: 3rem;
-    justify-content: flex-start;
-}
-
-/* VCS */
-
-.version > p {
-    margin-right: 3rem;
-    justify-content: flex-end;
-}
-
-.version > p > ion-icon {
-    margin: auto 0;
+    .version > p {
+        margin-right: 3rem;
+        justify-content: flex-end;
+    }
 }

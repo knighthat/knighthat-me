@@ -79,7 +79,7 @@ function Wallets() {
 export function Footer() {
   return (
       <footer>
-        <div className={"footer-margin"}>
+        <div className={"footer-margin sep-top-3-s"}>
           <div className="pure-g">
             <div className={"pure-u-1 pure-u-xl-1-3 footer-section"}>
               <h2>Contact me</h2>
@@ -91,16 +91,12 @@ export function Footer() {
               <Wallets/>
             </div>
           </div>
-          <div className="pure-g">
-            <div className={"pure-u-1"}>
-              <div className={"pure-u copyright-notice-and-version-section"}>
-                <div className={"pure-u-1-2 copyright-notice"}>
-                  <p>Copyright © 2024 Knight Hat. All Rights Reserved.</p>
-                </div>
-                <div className={"pure-u-1-2 version"}>
-                  <FetchLatestCommit/>
-                </div>
-              </div>
+          <div className={"pure-g copyright-notice-and-version-section sep-top-3-s"}>
+            <div className={"pure-u-1 pure-u-xl-1-2 copyright-notice"}>
+              <p>Copyright © 2024 Knight Hat. All Rights Reserved.</p>
+            </div>
+            <div className={"pure-u-1 pure-u-xl-1-2 version"}>
+              <FetchLatestCommit/>
             </div>
           </div>
         </div>
