@@ -63,7 +63,7 @@ footer {
 
 .copyright-notice > p, .version > p {
     display: flex;
-    color: #666;
+    color: var(--dark-theme-fg-color-faded);
 }
 
 @media screen and (min-width: 80em) {
