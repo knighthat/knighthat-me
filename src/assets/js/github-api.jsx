@@ -16,32 +16,42 @@
 
 import {useEffect, useState} from "react";
 
+
+const url = 'https://api.github.com/repos/knighthat/knighthat-me/commits?per_page=1';
+
 export function FetchLatestCommit() {
 
   const [latestCommit, setLatestCommit] = useState("version");
 
   useEffect(() => {
-    const fetchLatestCommit = async () => {
 
-      await fetch('https://api.github.com/repos/knighthat/knighthat-me/commits?per_page=1')
+    const lastCommit = async () => {
+
+      return await fetch(url)
           .then(async response => {
 
-            const data = await response.json();
+            return await response.json()
 
-            if (data.length > 0) {
+          }).catch(err => {
+            console.log('Failed to fetch commit from URL: ' + url)
+            console.log(err)
+          });
+    }
 
-              const hash = data[0].sha.slice(0, 7)
-              const date = data[0].commit.author.date.split("T")[0].replace('-', '.')
+    lastCommit()
+        .then(data => {
+          if (data.length > 0) {
+            setLatestCommit({
+              hash: data[0].sha.slice(0, 7),
+              date: data[0].commit.author.date.split("T")[0].replace('-', '.')
+            });
+          }
+        })
+        .catch(err => {
+          console.log('Error occurs while parsing commit tree from URL: ' + url)
+          console.log(err)
+        });
 
-              setLatestCommit({
-                hash: hash,
-                date: date
-              });
-            }
-          }).catch(error => console.error(error));
-    };
-
-    fetchLatestCommit();
   }, []);
 
   return (
