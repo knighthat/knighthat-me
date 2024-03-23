@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("/fonts/Josefin-Sans.ttf");
+}
+
+#notfound-board {
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+
+    --notfound-err-accent-1: #ffab00;
+    --notfound-err-accent-2: #c9c9c9;
+}
+
+#notfound-board > div {
+    max-width: 30rem;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+.notfound-error-code {
+    height: fit-content;
+}
+
+.notfound-error-code > h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--dark-theme-bg-color);
+    font-size: 220px;
+    letter-spacing: 10px;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 var(--notfound-err-accent-2), -2px -2px 0 var(--notfound-err-accent-2);
+}
+
+.notfound-error-code > h1 > span {
+    text-shadow: 2px 2px 0 var(--notfound-err-accent-1), -2px -2px 0 var(--notfound-err-accent-1), 0 0 8px #ff8700;
+}
+
+.notfound-error-description > p {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--notfound-err-accent-2);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.notfound-homepage-button-container > a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--notfound-err-accent-2);
+    border: 2px solid var(--notfound-err-accent-2);
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 700;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.notfound-homepage-button-container > a:hover {
+    color: var(--notfound-err-accent-1);
+    border-color: var(--notfound-err-accent-1);
+}
+
+@media only screen and (max-width: 480px) {
+    .notfound-error-code {
+        height: 122px;
+        line-height: 122px;
+    }
+
+    .notfound-error-code > h1 {
+        font-size: 122px;
+    }
+}
+
+footer.notfound-err-footer {
+    width: 80%;
+
+    padding-bottom: 5px;
+
+    color: var(--dark-theme-fg-color-faded);
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+footer.notfound-err-footer > a {
+    color: var(--dark-theme-fg-color-faded);
+    text-decoration: underline;
+}
