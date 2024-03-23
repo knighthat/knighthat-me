@@ -1,5 +1,7 @@
 import './homepage.css'
 
+import {Footer} from "../footer.jsx";
+
 
 export function HomePage() {
 
@@ -48,6 +50,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
+        <Footer/>
       </>
   )
 }
