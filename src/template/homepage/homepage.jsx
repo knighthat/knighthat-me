@@ -1,7 +1,5 @@
 import './homepage.css'
 
-import invidious from '/src/assets/icons/invidious-192x192.png'
-
 
 export function HomePage() {
 
@@ -23,7 +21,7 @@ export function HomePage() {
           <div className={"cards-layout"}>
             <div className={"feature-card pure-u-1"}>
               <div className={"feature-card-background"} onClick={gotoPage}>
-                <img className={"feature-card-icon"} src={invidious} alt={"invidious logo"}/>
+                <img className={"feature-card-icon"} src='/invidious-192x192.png' alt={"invidious logo"}/>
                 <div className={"feature-card-description"}>
                   <h2 className={"feature-card-description-title"}>Invidious</h2>
                   <p className={"feature-card-description-description"}>Privacy focused front-end for Youtube</p>
@@ -32,7 +30,7 @@ export function HomePage() {
             </div>
             <div className={"feature-card pure-u-1"}>
               <div className={"feature-card-background"} onClick={gotoPage}>
-                <img className={"feature-card-icon"} src={invidious} alt={"invidious logo"}/>
+                <img className={"feature-card-icon"} src='/invidious-192x192.png' alt={"invidious logo"}/>
                 <div className={"feature-card-description"}>
                   <h2 className={"feature-card-description-title"}>Invidious</h2>
                   <p className={"feature-card-description-description"}>Privacy focused front-end for Youtube</p>
@@ -41,7 +39,7 @@ export function HomePage() {
             </div>
             <div className={"feature-card pure-u-1"}>
               <div className={"feature-card-background"} onClick={gotoPage}>
-                <img className={"feature-card-icon"} src={invidious} alt={"invidious logo"}/>
+                <img className={"feature-card-icon"} src='/invidious-192x192.png' alt={"invidious logo"}/>
                 <div className={"feature-card-description"}>
                   <h2 className={"feature-card-description-title"}>Invidious</h2>
                   <p className={"feature-card-description-description"}>Privacy focused front-end for Youtube</p>
