@@ -82,6 +82,10 @@ footer {
     color: var(--dark-theme-fg-color-faded);
 }
 
+.version > p > ion-icon {
+    margin: auto 0;
+}
+
 @media screen and (min-width: 80em) {
     .copyright-notice > p {
         margin-left: 3rem;
