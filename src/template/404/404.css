@@ -14,11 +14,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-@font-face {
-    font-family: "Josefin Sans";
-    src: url("/fonts/Josefin-Sans.ttf");
-}
-
 #notfound-board {
     height: 100vh;
 
