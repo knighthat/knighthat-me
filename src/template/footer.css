@@ -77,9 +77,32 @@ footer {
     height: 2rem;
 }
 
-.copyright-notice > p, .version > p {
+.copyright-notice,
+.version {
     display: flex;
     color: var(--dark-theme-fg-color-faded);
+}
+
+.copyright-notice.pure-u-1 > p,
+.version.pure-u-1 > p {
+    margin: 1rem auto;
+}
+
+@media screen and (min-width: 1280px) {
+    .copyright-notice.pure-u-xl-1-2 > p {
+        margin-left: 0;
+    }
+
+    .version.pure-u-xl-1-2 > p {
+        margin-right: 0;
+    }
+}
+
+/*
+    Version
+*/
+.version > p {
+    display: flex;
 }
 
 .version > p > ion-icon {
