@@ -108,15 +108,3 @@ footer {
 .version > p > ion-icon {
     margin: auto 0;
 }
-
-@media screen and (min-width: 80em) {
-    .copyright-notice > p {
-        margin-left: 3rem;
-        justify-content: flex-start;
-    }
-
-    .version > p {
-        margin-right: 3rem;
-        justify-content: flex-end;
-    }
-}
