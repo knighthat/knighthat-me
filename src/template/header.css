@@ -1,0 +1,235 @@
+/*
+ * Copyright (c) 2024 KnightHat. All right reserves
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 100;
+
+    box-sizing: border-box;
+}
+
+#header-menu ion-icon {
+    margin: auto 5px auto auto;
+}
+
+#header-menu ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+#header-menu li {
+    padding: 1.25rem;
+    list-style: none;
+}
+
+#header-menu a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Desktop
+*/
+header#desktop {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.desktop-menu {
+    width: fit-content;
+
+    transition: .5s;
+
+    border-radius: 0 0 20px 20px;
+
+    pointer-events: auto;
+}
+
+.desktop-menu.black {
+    background: var(--dark-theme-bg-color);
+    border: 1px white solid;
+    border-top: 0;
+}
+
+#desktop #header-menu ul {
+    flex-direction: row;
+}
+
+#desktop #header-menu a {
+    color: var(--dark-theme-fg-color);
+    font-size: 1.5rem;
+
+    padding: .25rem;
+    /*
+        This prevents parent border from expanding/collapsing
+        as children border (dis)appears.
+     */
+    border: 2px solid transparent;
+}
+
+#desktop #header-menu ul li a:hover {
+    border-top: 2px solid var(--dark-theme-fg-color);
+    border-bottom: 2px solid var(--dark-theme-fg-color);
+}
+
+
+/*
+    Mobile
+*/
+#mobile {
+    --hamburger-bar-width: 60px;
+    --hamburger-bar-height: 10px;
+    --hamburger-bar-gap: 6px;
+
+    --hamburger-bg: var(--dark-theme-bg-color);
+    --hamburger-fg: var(--dark-theme-fg-color);
+    --hamburger-margin: 1rem;
+    --hamburger-animation-timming: 200ms ease-in-out;
+    --hamburger-height: calc(var(--hamburger-bar-height) * 3 + var(--hamburger-bar-gap) * 2);
+}
+
+.header-hamburger-menu {
+    position: absolute;
+    right: var(--hamburger-margin);
+    top: var(--hamburger-margin);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-bar-gap);
+
+    z-index: 1;
+
+    /* 1.41421356237 is square root of 2 */
+    --x-width: calc(var(--hamburger-height) * 1.41421356237)
+}
+
+.header-hamburger-menu::before,
+.header-hamburger-menu::after,
+.header-hamburger-menu > input {
+    content: "";
+
+    width: var(--hamburger-bar-width);
+    height: var(--hamburger-bar-height);
+
+    background: var(--hamburger-fg);
+    border-radius: 9999px;
+
+    transition: opacity var(--hamburger-animation-timming),
+    width var(--hamburger-animation-timming),
+    rotate var(--hamburger-animation-timming),
+    translate var(--hamburger-animation-timming),
+    background-color var(--hamburger-animation-timming);
+
+    transform-origin: left center;
+    -webkit-transform-origin: left center;
+}
+
+.header-hamburger-menu:has(input:focus-visible)::before,
+.header-hamburger-menu:has(input:focus-visible)::after,
+.header-hamburger-menu > input:focus-visible {
+    border: 1px solid var(--hamburger-bg);
+    box-shadow: 0 0 0 1px var(--hamburger-fg);
+}
+
+.header-hamburger-menu > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.header-hamburger-menu:has(input:checked) {
+    --hamburger-bg: var(--dark-theme-fg-color);
+    --hamburger-fg: var(--dark-theme-bg-color);
+}
+
+.header-hamburger-menu:has(input:checked)::before {
+    /*transform: rotate(45deg);*/
+    rotate: 45deg;
+    width: var(--x-width);
+
+    translate: 0 calc(var(--hamburger-bar-height) / -2);
+}
+
+.header-hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+
+    translate: 0 calc(var(--hamburger-bar-height) / 2);
+}
+
+.header-hamburger-menu > input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+/*
+    Sidebar
+*/
+.header-sidebar {
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 240px;
+
+    position: fixed;
+    right: 0;
+
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+
+    background: var(--dark-theme-fg-color);
+
+    translate: 100%;
+    transition: translate var(--hamburger-animation-timming);
+}
+
+.header-hamburger-menu:has(input:checked) + .header-sidebar {
+    translate: 0;
+}
+
+#mobile #header-menu ul {
+    flex-direction: column;
+}
+
+#mobile #header-menu li {
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 2px solid var(--dark-theme-bg-color);
+}
+
+#mobile #header-menu a {
+    color: var(--dark-theme-bg-color);
+    font-size: 2rem;
+}
+
+.header-sidebar > nav > ul:first-child {
+    border-top: 2px solid var(--dark-theme-bg-color);
+}

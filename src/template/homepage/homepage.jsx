@@ -17,6 +17,7 @@
 import './homepage.css'
 
 import {Footer} from "../footer.jsx";
+import Header from "../header.jsx";
 
 export function HomePage() {
 
@@ -26,6 +27,7 @@ export function HomePage() {
 
   return (
       <>
+        <Header/>
         <div id={"header-background"}></div>
         <div className={"logo-section flex-row-wrap-center"}>
           <div className={"flex-row-wrap-center logo-container"}>
