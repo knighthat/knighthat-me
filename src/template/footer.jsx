@@ -52,6 +52,23 @@ function Contacts() {
 }
 
 function Wallets() {
+  const copyContent = async event => {
+    const target = event.target;
+    const textToCopy = target.textContent;
+
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+
+      target.textContent = "Copied!"
+      setTimeout(() => {
+        target.textContent = textToCopy;
+      }, 2000);
+
+    } catch (err) {
+      console.log('Could not copy address. Copy this yourself: ' + textToCopy);
+    }
+  }
+
   return (
       <div className={"pure-g"}>
         {/* Bitcoin Wallet */}
@@ -61,10 +78,11 @@ function Wallets() {
               src='/icons/btc-32x32.png'
               alt={"Bitcoin logo"}
           />
-          <div className={"pure-u-4-5"}>
+          <div className={"pure-u-4-5 hint-container"}>
             <div className={"pure-u-1 footer-section-method-text"}>
-              <span>1GpZUvhdVkCFxqF4vuaiFxtBTxB3L94vnK</span>
+              <span onClick={copyContent}>1GpZUvhdVkCFxqF4vuaiFxtBTxB3L94vnK</span>
             </div>
+            <span>Left-click to copy</span>
           </div>
         </div>
 
@@ -75,10 +93,12 @@ function Wallets() {
               src='/icons/xmr-32x32.png'
               alt={"Bitcoin logo"}
           />
-          <div className={"pure-u-4-5"}>
+          <div className={"pure-u-4-5 hint-container"}>
             <div className={"pure-u-1 footer-section-method-text"}>
-              <span>44G5dUFTbFWYfZAk69irnDUCTNZzP5viNTmkGpCNCLHjjYQq7jjRTWoYTH1aY8P841hExP31Qxg2hXPtxreKu11zCYdxQUj</span>
+              <span
+                  onClick={copyContent}>44G5dUFTbFWYfZAk69irnDUCTNZzP5viNTmkGpCNCLHjjYQq7jjRTWoYTH1aY8P841hExP31Qxg2hXPtxreKu11zCYdxQUj</span>
             </div>
+            <span>Left-click to copy</span>
           </div>
         </div>
 
@@ -89,10 +109,11 @@ function Wallets() {
               src='/icons/eth-32x32.png'
               alt={"Bitcoin logo"}
           />
-          <div className={"pure-u-4-5"}>
+          <div className={"pure-u-4-5 hint-container"}>
             <div className={"pure-u-1 footer-section-method-text"}>
-              <span>0x15b9F199b4Db223Ac35bfd5c43B7036E29d06141</span>
+              <span onClick={copyContent}>0x15b9F199b4Db223Ac35bfd5c43B7036E29d06141</span>
             </div>
+            <span>Left-click to copy</span>
           </div>
         </div>
       </div>
@@ -104,7 +125,7 @@ export function Footer() {
       <footer>
         <div className={"footer-margin sep-top-3-s"}>
           <div className="pure-g">
-            <div className={"pure-u-1 pure-u-xl-1-3 footer-section"}>
+            <div id={'contact-section'} className={"pure-u-1 pure-u-xl-1-3 footer-section"}>
               <h2>Contact me</h2>
               <Contacts/>
             </div>
