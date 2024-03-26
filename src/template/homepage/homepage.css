@@ -37,12 +37,6 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
-    #header-background {
-        min-height: 5vh;
-    }
-}
-
 /*
     Logo
 */
@@ -106,77 +100,84 @@
 */
 
 div.features-section {
-    min-height: 10rem;
+    justify-content: center;
 }
 
-.cards-layout {
-    width: 100%;
-    height: inherit;
-
-    padding: 0 10%;
-
-    display: flex;
-    justify-content: space-between;
+.feature-cards-container {
+    width: 80%;
+    max-width: 1460px;
+    
+    margin: 5% 0;
 }
 
-@media screen and (max-width: 1280px) {
+.feature-card-margin {
+    width: 250px;
+    min-height: 300px;
 
-    .cards-layout {
-        flex-direction: column;
-        align-content: center;
-        gap: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 1460px) {
-    .cards-layout {
-        margin-bottom: 5rem;
-    }
+    align-self: center;
+    margin: auto;
 }
 
 .feature-card {
-    flex: 1;
-    text-align: center;
-}
-
-@media screen and (min-width: 1280px) {
-    .feature-card {
-        transform: translate(0, -35%);
-    }
-}
-
-@media screen and (max-width: 1460px) {
-    .feature-card {
-        transform: translate(0, 15%);
-    }
-}
-
-.feature-card-background {
-    max-width: 250px;
-    min-height: 300px;
-
-    margin: 0 auto;
-
-    /*background: linear-gradient(to bottom right, #00A3AF, #FF8350);*/
     background: #575757;
     border-radius: 10px 30px 10px 30px;
 }
 
-.feature-card-background:hover {
-    cursor: pointer;
+.feature-card > a {
+    width: inherit;
+    height: 300px;
+
+    display: inline-block;
+
+    color: var(--dark-theme-fg-color);
+    text-decoration: none;
 }
 
 .feature-card-icon {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.feature-card-icon > img {
     max-width: 80%;
 }
 
-.feature-card-description > .feature-card-description-title {
-    text-align: left;
-    margin: 0 0 0 10%;
-}
+.feature-card-description > h2,
+.feature-card-description > p {
+    max-width: 80%;
 
-.feature-card-description > p.feature-card-description-description {
     margin: 0 10%;
 
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h2.feature-card-description-title {
+    white-space: nowrap;
+}
+
+p.feature-card-description-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    /* Limit the number of displayed lines to 3 */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+@media screen and (max-width: 1280px) {
+    .feature-cards-container > .pure-g {
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1460px) {
+    .feature-cards-container {
+        transform: translate(0, -50%);
+        margin: 0;
+    }
 }
