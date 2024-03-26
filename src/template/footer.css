@@ -43,8 +43,7 @@ footer {
 
 /* Space between elements in section. For MOBILE devices */
 .footer-section > div.pure-g {
-    margin: 2rem 0 3rem 1rem;
-    gap: 2rem;
+    margin: 2rem 0 2rem 1rem;
 }
 
 .footer-section-method-icon {
@@ -63,7 +62,6 @@ footer {
 }
 
 .footer-section-method-text > span {
-    max-width: 90%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
