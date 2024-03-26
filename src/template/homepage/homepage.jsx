@@ -58,7 +58,7 @@ export default function HomePage() {
         <div className={'pure-g features-section'}>
           <div className={'feature-cards-container'}>
             <div className={'pure-g'}>
-              <div className={'pure-u-xl-1-3'}></div>
+              <div className={'pure-u-1 pure-u-xl-1-3'}></div>
               <FeatureCard
                   icon_path='invidious-192x192.png'
                   icon_alt='Invidious logo'
@@ -66,7 +66,7 @@ export default function HomePage() {
                   description='Privacy focused front-end for Youtube'
                   destination='https://inv.knighthat.me'
               />
-              <div className={'pure-u-xl-1-3'}></div>
+              <div className={'pure-u-1 pure-u-xl-1-3'}></div>
             </div>
           </div>
         </div>
