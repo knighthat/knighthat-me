@@ -18,7 +18,7 @@ import './homepage.css'
 
 import {Link} from "react-router-dom";
 
-import {Footer} from "../footer.jsx";
+import Footer from "../footer.jsx";
 import Header from "../header.jsx";
 
 

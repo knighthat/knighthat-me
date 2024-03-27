@@ -123,7 +123,7 @@ function Wallets() {
   )
 }
 
-export function Footer() {
+export default function Footer() {
   return (
       <footer>
         <div className={"footer-margin sep-top-3-s"}>
