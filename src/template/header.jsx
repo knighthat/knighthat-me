@@ -54,7 +54,7 @@ function Menu() {
             </Link>
           </li>
           <li>
-            <Link to={'/health'}>
+            <Link to={'https://stats.uptimerobot.com/d4W3IObhGn'}>
               <ion-icon name="checkmark-done-circle-sharp"></ion-icon>
               Health
             </Link>
