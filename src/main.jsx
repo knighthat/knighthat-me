@@ -20,8 +20,9 @@ import ReactDOM from 'react-dom/client'
 import './assets/css/global.css'
 import './assets/css/fonts.css'
 
-import Err404 from "./template/404/404.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+import Err404 from "./template/404/404.jsx";
 import HomePage from "./template/homepage/homepage.jsx";
 
 
