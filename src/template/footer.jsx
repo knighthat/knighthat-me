@@ -17,7 +17,8 @@
 import './footer.css'
 
 import {FetchLatestCommit} from "/src/assets/js/github-api.jsx";
-import {CONTACT_EMAIL, REPOSITORY} from "/src/assets/js/global.jsx";
+import {CONTACT_EMAIL, GITHUB, REPOSITORY} from "/src/assets/js/global.jsx";
+import {Link} from "react-router-dom";
 
 function Contacts() {
   return (
@@ -29,7 +30,9 @@ function Contacts() {
           </div>
           <div className={"pure-u-4-5"}>
             <div className={"pure-u-1 footer-section-method-text"}>
-              <span>{CONTACT_EMAIL}</span>
+              <Link to={'mailto://' + CONTACT_EMAIL}>
+                <span>{CONTACT_EMAIL}</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -41,9 +44,9 @@ function Contacts() {
           </div>
           <div className={"pure-u-4-5"}>
             <div className={"pure-u-1 footer-section-method-text"}>
-              <span>
-                Source code
-              </span>
+              <Link to={GITHUB}>
+                <span>Source code</span>
+              </Link>
             </div>
           </div>
         </div>

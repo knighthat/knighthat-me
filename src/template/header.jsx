@@ -16,8 +16,10 @@
 
 import './header.css'
 
-import {GITHUB} from "../assets/js/global.jsx";
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
+
+import {GITHUB, CONTACT_EMAIL} from "../assets/js/global.jsx";
 
 function Menu() {
   return (
@@ -27,35 +29,35 @@ function Menu() {
             window.location.pathname === '/'
                 ? <></>
                 : <li>
-                  <a href="/">
+                  <Link to={'/'}>
                     <ion-icon name="home-sharp"></ion-icon>
                     Home
-                  </a>
+                  </Link>
                 </li>
           }
           <li>
-            <a href={GITHUB}>
+            <Link to={GITHUB}>
               <ion-icon name="logo-github"></ion-icon>
               Github
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="mailto://contact@knighthat.me">
+            <Link to={'mailto://' + CONTACT_EMAIL}>
               <ion-icon name="mail-sharp"></ion-icon>
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/services'>
+            <Link to={'/services'}>
               <ion-icon name="file-tray-stacked-sharp"></ion-icon>
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/health'>
+            <Link to={'/health'}>
               <ion-icon name="checkmark-done-circle-sharp"></ion-icon>
               Health
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

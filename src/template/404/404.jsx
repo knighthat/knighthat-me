@@ -16,6 +16,8 @@
 
 import './404.css'
 
+import {Link} from "react-router-dom";
+
 function Footer() {
   return (
       <footer className={"notfound-err-footer"}>
@@ -42,7 +44,7 @@ export default function Err404() {
               </div>
             </div>
             <div className={"pure-u-1 notfound-homepage-button-container"}>
-              <a href='/'>home page</a>
+              <Link to={'/'}>home page</Link>
             </div>
           </div>
         </div>

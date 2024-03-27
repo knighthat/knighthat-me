@@ -16,6 +16,8 @@
 
 import './homepage.css'
 
+import {Link} from "react-router-dom";
+
 import {Footer} from "../footer.jsx";
 import Header from "../header.jsx";
 
@@ -25,7 +27,7 @@ function FeatureCard({icon_path, icon_alt, title, description, destination}) {
       <div className={'pure-u-1 pure-u-xl-1-3'}>
         <div className={'feature-card-margin'}>
           <div className={'feature-card'}>
-            <a href={destination}>
+            <Link to={destination}>
               <div className={'feature-card-icon'}>
                 <img src={'/' + icon_path} alt={icon_alt}/>
               </div>
@@ -33,7 +35,7 @@ function FeatureCard({icon_path, icon_alt, title, description, destination}) {
                 <h2 className={"feature-card-description-title"}>{title}</h2>
                 <p className={"feature-card-description-description"}>{description}</p>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
