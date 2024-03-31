@@ -20,11 +20,12 @@ import {Link} from "react-router-dom";
 
 import Footer from "../footer.jsx";
 import Header from "../header.jsx";
+import {GITHUB} from "../../assets/js/global.jsx";
 
 
 function FeatureCard({icon_path, icon_alt, title, description, destination}) {
   return (
-      <div className={'pure-u-1 pure-u-xl-1-3'}>
+      <div className={'pure-u-1 pure-u-xl-1-2'}>
         <div className={'feature-card-margin'}>
           <div className={'feature-card'}>
             <Link to={destination}>
@@ -60,13 +61,19 @@ export default function HomePage() {
         <div className={'pure-g features-section'}>
           <div className={'feature-cards-container'}>
             <div className={'pure-g'}>
-              <div className={'pure-u-1 pure-u-xl-1-3'}></div>
               <FeatureCard
                   icon_path='invidious-192x192.webp'
                   icon_alt='Invidious logo'
                   title='Invidious'
                   description='Privacy focused front-end for Youtube'
                   destination='https://inv.knighthat.me'
+              />
+              <FeatureCard
+                  icon_path='zstd-backup-192x192.webp'
+                  icon_alt='ZSTD backup logo'
+                  title='ZSTD Backup'
+                  description='Compress your files and folders using ZStandard algorithm'
+                  destination={GITHUB + 'zstd-backup'}
               />
               <div className={'pure-u-1 pure-u-xl-1-3'}></div>
             </div>
