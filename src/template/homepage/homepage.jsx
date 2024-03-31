@@ -29,7 +29,7 @@ function FeatureCard({icon_path, icon_alt, title, description, destination}) {
           <div className={'feature-card'}>
             <Link to={destination}>
               <div className={'feature-card-icon'}>
-                <img src={'/' + icon_path} alt={icon_alt}/>
+                <img src={'/services/' + icon_path} alt={icon_alt}/>
               </div>
               <div className={'feature-card-description'}>
                 <h2 className={"feature-card-description-title"}>{title}</h2>
@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className={'pure-g'}>
               <div className={'pure-u-1 pure-u-xl-1-3'}></div>
               <FeatureCard
-                  icon_path='invidious-192x192.png'
+                  icon_path='invidious-192x192.webp'
                   icon_alt='Invidious logo'
                   title='Invidious'
                   description='Privacy focused front-end for Youtube'
