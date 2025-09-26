@@ -4,8 +4,10 @@ import {
   logoGithub, 
   logoGitlab,
   logoLinkedin,
-  locateOutline
+  locateOutline,
+  chevronDown
 } from 'ionicons/icons'
+import { useState } from 'react'
 
 
 export function SidebarInfo() {
@@ -78,5 +80,33 @@ export function SidebarInfo() {
       </div>
 
     </div>
+  )
+}
+
+export default function Sidebar() {
+  const [active, setActive] = useState(false)
+
+  return (
+    <aside className={`sidebar ${active ? "active" : ""}`}>
+
+      <div className="sidebar-info">
+
+        <div className="info-content">
+          <h1 className="name" title="James Nguyen">James Nguyen</h1>
+
+          <p className="title">Software developer</p>
+        </div>
+
+        <button className="info_more-btn" onClick={ () => setActive(prev => !prev) }>
+          <span>Show Contacts</span>
+
+          <IonIcon icon={chevronDown} />
+        </button>
+
+      </div>
+
+      <SidebarInfo />
+
+    </aside>
   )
 }
