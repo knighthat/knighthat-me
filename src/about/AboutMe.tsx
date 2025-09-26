@@ -10,10 +10,9 @@ export default function AboutMe() {
       </p>
 
       <p>
-        As a freelance software developer, I've gained hands-on experience in database management, 
-        API integration, and optimizing application performance. 
-        I specialize in creating custom solutions that ensure efficient data exchange. 
-        I'm adept at adapting to evolving project needs and collaborating effectively with experienced teams.
+        Passionate about database management, API integration, and improving application performance, 
+        with a focus on creating custom solutions that make data flow smoothly. 
+        Enjoy tackling evolving project challenges and working closely with teams to bring ideas to life.
       </p>
     </section>
   )
