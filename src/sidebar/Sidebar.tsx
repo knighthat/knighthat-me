@@ -4,8 +4,8 @@ import {
   logoGithub, 
   logoGitlab,
   logoLinkedin,
-  locateOutline,
-  chevronDown
+  chevronDown,
+  locationOutline
 } from 'ionicons/icons'
 import { useState } from 'react'
 
@@ -35,7 +35,7 @@ export function SidebarInfo() {
         <li className="contact-item">
 
           <div className="icon-box">
-            <IonIcon icon={locateOutline} />
+            <IonIcon icon={locationOutline} />
           </div>
 
           <div className="contact-info">
