@@ -5,6 +5,7 @@ import Services from "./about/Services"
 import Portfolio from "./portfolio/Portfolio"
 import { Experience, Projects } from "./resume/Experience"
 import { Skills } from "./resume/Skills"
+import Languages from "./about/Languages"
 
 
 type Tab = 'about' | 'resume' | 'portfolio'
@@ -63,6 +64,7 @@ export default function MainContent() {
       <Article title="About me" className='about' page={page}>
         <AboutMe />
         <Services />
+        <Languages />
       </Article>
 
       <Article title="Resume" className='resume' page={page}>
