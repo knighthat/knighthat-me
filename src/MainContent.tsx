@@ -74,6 +74,16 @@ export default function MainContent() {
       <Article title="Portfolio" className='portfolio' page={page}>
         <Portfolio />
       </Article>
+
+      <div className="credit-section">
+        <p>
+          Template from <a className="credit-link" href="https://github.com/codewithsadee/vcard-personal-portfolio">vCard</a>
+        </p>
+        <p style={{margin: '0 10px'}}>—</p>
+        <p>
+          Powered by  <a className="credit-link" href="https://vercel.com">Vercel</a>
+        </p>
+      </div>
     </div>
   )
 }

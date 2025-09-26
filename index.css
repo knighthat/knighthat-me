@@ -299,7 +299,7 @@ article.active {
   justify-content: center;
 }
 
-.credit-source {
+.credit-section > p {
   color: var(--light-gray-70);
   font-size: var(--fs-8);
 }

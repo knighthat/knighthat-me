@@ -1,13 +1,7 @@
 import { IonIcon } from '@ionic/react'
-import { 
-  mailOutline,
-  logoGithub, 
-  logoGitlab,
-  logoLinkedin,
-  chevronDown,
-  locationOutline
-} from 'ionicons/icons'
+import { chevronDown, } from 'ionicons/icons'
 import { useState } from 'react'
+
 import Contacts from './Contacts'
 import Socials from './Socials'
 
