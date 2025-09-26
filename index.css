@@ -310,8 +310,6 @@ article.active {
   text-decoration: underline;
 }
 
-.credit-link:hover { color: var(--light-gray); }
-
 
 
 
@@ -464,7 +462,10 @@ main {
 }
 
 
-.social-item .social-link:hover { color: var(--light-gray); }
+.clickable:hover { 
+  color: var(--orange-yellow-crayola);
+  transition: color .3s ease;
+}
 
 
 

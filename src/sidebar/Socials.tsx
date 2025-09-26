@@ -10,7 +10,7 @@ type SocialItemProps = {
 function SocialItem({ url, icon }: SocialItemProps) {
   return (
     <li className="social-item">
-      <a href={url} className="social-link">
+      <a href={url} className="social-link clickable">
         <IonIcon icon={icon} />
       </a>
     </li>

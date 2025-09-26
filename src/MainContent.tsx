@@ -77,11 +77,11 @@ export default function MainContent() {
 
       <div className="credit-section">
         <p>
-          Template from <a className="credit-link" href="https://github.com/codewithsadee/vcard-personal-portfolio">vCard</a>
+          Template from <a className="credit-link clickable" href="https://github.com/codewithsadee/vcard-personal-portfolio">vCard</a>
         </p>
         <p style={{margin: '0 10px'}}>—</p>
         <p>
-          Powered by  <a className="credit-link" href="https://vercel.com">Vercel</a>
+          Powered by  <a className="credit-link clickable" href="https://vercel.com">Vercel</a>
         </p>
       </div>
     </div>
