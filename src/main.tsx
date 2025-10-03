@@ -3,6 +3,7 @@ import { StrictMode } from 'react'
 
 import MainContent from './MainContent'
 import Sidebar from './sidebar/Sidebar'
+import { Analytics } from '@vercel/analytics/react'
 
 
 createRoot(document.getElementsByTagName('main')[0]!).render(
@@ -10,4 +11,8 @@ createRoot(document.getElementsByTagName('main')[0]!).render(
     <Sidebar />
     <MainContent />
   </StrictMode>
+)
+
+createRoot(document.getElementById('analytics')!).render(
+    <Analytics />
 )
